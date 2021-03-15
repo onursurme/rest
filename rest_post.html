@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+	<p id="p1"></p>
+	<p id="p2"></p>
+	<script>
+  
+  var params = {
+    firstname: 'Fred',
+    lastname:  'Flintstone'
+  };
+
+  axios.post('http://birincibasamak.com/rest/rest_post.php', params)
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+    console.log("axios post hata verdi");
+  });
+
+	</script>
+
+</body>
+</html>

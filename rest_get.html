@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+	<p id="p1"></p>
+	<p id="p2"></p>
+	<script>
+
+	axios.get('http://birincibasamak.com/rest/rest.php')
+  		.then(function (response) {
+    		console.log(response);
+    		//console.log(typeof(response));
+    		//console.log(typeof(response.data));
+    		//console.log(response.data["0"].id);
+    		document.getElementById("p1").innerHTML = response.data["0"].id; 
+    		document.getElementById("p2").innerHTML = response.data["0"].data; 
+  		})
+  		.catch(function (error) {
+    		console.log(error);
+  		});
+
+	</script>
+
+</body>
+</html>
