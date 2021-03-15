@@ -11,10 +11,23 @@
       die("Connection failed: " . mysqli_connect_error());
     }
 
+  if ($_POST['opcode']=='1') {
     // BU ÇALIŞIYOR, SADECE ayse ve seyhan yerine $_POST["firstname"] ve $_POST['lastname'] yazılacak $qu = "INSERT INTO `users` (`id`, `firstname`, `lastname`) VALUES (NULL, 'ayse', 'seyhan');";
     $qu = "INSERT INTO `users` (`id`, `firstname`, `lastname`) VALUES (NULL, '" . $_POST['firstname']. "', '" . $_POST['lastname']. "');";
     $pss = mysqli_query($conn,$qu);
     if ($pss) {
       echo "kayıt başarılı";
     }
+  }
+
+  if ($_POST['opcode']=='2') {
+    $fn=$_POST['firstname'];
+    $ln=$_POST['lastname'];
+    $qu = "DELETE FROM `users` WHERE `firstname`=" . '"' . $fn . '"' . " AND " . "`lastname`=". '"' . $ln . '"';
+    echo $qu;
+    $pss = mysqli_query($conn,$qu);
+    if ($pss) {
+      echo "silme işlemi başarılı";
+    }
+  }
 ?>
