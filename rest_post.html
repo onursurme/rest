@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+  <meta charset="UTF-8">
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
@@ -8,12 +9,13 @@
 	<script>
   
   var params = {
-    opcode: '2',  
-    firstname: 'Fred',
-    lastname:  'Flintstone'
+    opcode: '1',  
+    username :  'Fred',
+    password :  'Flintstone',
+    email    :  'flint@stone.com'
   };
 
-  axios.post('http://birincibasamak.com/rest/rest_post.php', params)
+  axios.post('http://localhost/rest/rest_post.php', params)
   .then(function (response) {
     console.log(response);
   })
