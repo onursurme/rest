@@ -1,11 +1,9 @@
 <?php
-/*  * Annova Özel Eğitim Kurumları ERP yazılımı
+/*  *  Copyright (c) Labotecha Software 2020
  * 
- * Copyright (c) Annova Software 2020
+ * File:      rest_get.php
  * 
- * File:      rest.php
- * 
- * Contents:  axios ile yapılan get request'e yanıt verir
+ * Contents:  rest_get.html'den axios ile yapılan get request'e yanıt verir
  * 
  * History:   14.03.2021, drx */
 $myArray = array();

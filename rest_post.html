@@ -4,15 +4,17 @@
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
+  <!-- rest_post.php'ye veri göndererek verinin kaydedilmesini veya silinmesini sağlar.
+   opcode=1 ise kaydeder,  ise siler -->
 	<p id="p1"></p>
 	<p id="p2"></p>
 	<script>
   
   var params = {
-    opcode: '1',  
-    username :  'Fred',
-    password :  'Flintstone',
-    email    :  'flint@stone.com'
+    opcode: '2',  
+    username :  'Freddy',
+    password :  'Kruger',
+    email    :  'bad@boy.com'
   };
 
   axios.post('http://localhost/rest/rest_post.php', params)

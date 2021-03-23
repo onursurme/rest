@@ -1,11 +1,11 @@
 <?php
-/*  * Annova Özel Eğitim Kurumları ERP yazılımı
+/*  * Copyright (c) Labotecha Software 2020
  * 
- * Copyright (c) Annova Software 2020
+ * File:      rest_get_products.php
  * 
- * File:      rest.php
- * 
- * Contents:  axios ile yapılan get request'e yanıt verir
+ * Contents:  Fatih Kılınç'ın intro'sundan axios ile yapılan get request'e yanıt verir
+ * Bu dosyayla birlikte kullanılan intro versiyonun build klasörü zip'li olarak bu klasörde mevcut
+ * birincibasamak.com/intro linkinde HepsiAnnova tıklandıktan sonra çalıştığı görülebilir
  * 
  * History:   14.03.2021, drx */
 $myArray = array();

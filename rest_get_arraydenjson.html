@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <!-- rest_get_arraydenjson.php'den get metoduyla veri talep eder -->
+	<p id="p1"></p>
+	<p id="p2"></p>
+	<script>
+
+	axios.get('http://localhost/rest/rest_arraydenjson.php')
+  		.then(function (response) {
+    		console.log(response);
+    		document.getElementById("p1").innerHTML = response.data["0"]; 
+    		document.getElementById("p2").innerHTML = response.data["1"]; 
+  		})
+  		.catch(function (error) {
+    		console.log(error);
+  		});
+
+	</script>
+
+</body>
+</html>

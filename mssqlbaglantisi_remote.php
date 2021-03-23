@@ -1,5 +1,13 @@
 <?php
-$serverName = "ova-db.database.windows.net"; 
+/*  *  Copyright (c) Labotecha Software 2020
+ * 
+ * File:      mssqlbaglantisi_remote.php
+ * 
+ * Contents:  sqlsrv kurmadığım için bu script'i henüz deneyemedim,
+ * veritabanı bağlantı bilgilerini de güncellemek gerekebilir.
+ * 
+ * History:   14.03.2021, drx */
+$serverName = "nova-db.database.windows.net"; 
 $connectionInfo = array( "Database"=>"TIGER3", "UID"=>"annova", "PWD"=>"Er7703193++");
 $conn = sqlsrv_connect( $serverName, $connectionInfo);
 
@@ -7,6 +15,7 @@ if( $conn ) {
     echo "Connection established.<br />";
     //$myArray = array();
 
+    // $myArray'e böyle literal değil, sql sorgusundan dönen veriyi atayacağız :
 	//$myArray[] = array("id" => 1, "data" => 45);
 	//$myArray[] = array("id" => 3, "data" => 54);
 
@@ -16,32 +25,5 @@ if( $conn ) {
      echo "Connection could not be established.<br />";
      die( print_r( sqlsrv_errors(), true));
 }
-
-
-// $conn = mysqli_connect("localhost","root","","htlab");
-// 	mysqli_set_charset($conn,"utf8");
-
-//     /////////////////////////////////////////////////////////////7
-//     ////////////////  LOADPATIENTPHP DEN ALINTI AŞAĞISI
-
-// 	  if (!$conn) {
-//       die("Connection failed: " . mysqli_connect_error());
-//     }
-//     // $qu = "INSERT INTO " . " p1_". $username. " VALUES ('1','veli','tansiyonudeli',now())";
-//     $qu = "SELECT * FROM " . " p1_". "onurw" . " WHERE tc='". "10448728824" . "'";
-//     // echo $qu;
-//     $pss = mysqli_query($conn,$qu);
-//     if ($pss) {
-//       echo "yükleme başarılı";
-//       $row=mysqli_fetch_array($pss, MYSQLI_ASSOC);
-//       /* echo "here is row : " . "<br>";
-//       var_dump($row); */
-//       foreach ($row as $key => $value){
-//         $d[$key]=$value;
-//       }
-//       /* echo "here is d : " . "<br>";  */
-//       var_dump($d);
-//     }
-
 
 ?>
